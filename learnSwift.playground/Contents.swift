@@ -153,7 +153,7 @@ func minMax(tableau: [ Int ]) -> (min: Int, max: Int )? {
     return (valMin, valMax)
 }
 
-if let bornes = minMax([8, -6, 2, 109, 3, 71]) {
+if let bornes = minMax(tableau: [8, -6, 2, 109, 3, 71]) {
     print("Le minimum est \(bornes.min) et le maximum est \(bornes.max)")
 }
  
@@ -171,7 +171,6 @@ concatener(chaine: "Hello", avecLaChaine: "World", etLeSeparateur: ",")
 class Eleve {
     var nom: String
     var prenom: String
-    var notes: [Double]
     /** Calculated props **/
     var moyenne: Double {
         get {
@@ -196,12 +195,12 @@ class Eleve {
     /** Constructeur **/
     // adding the "_" permits us to declare a new class without declaring the parameters before
     init(_nom: String, _prenom:String) {
-        self.nom = nom
-        self.prenom = prenom
+        self.nom = _nom
+        self.prenom = _prenom
         notes = [10]
     }
     convenience init() {
-        self.init("", "")
+        self.init(_nom: "", _prenom:"")
     }
     /** "observateur" **/
     var notes: [Double]{
@@ -212,5 +211,5 @@ class Eleve {
     // didSet and willSet
 }
 
-var e = Eleve("ABC","DEF")
+var e = Eleve(_nom: "ABC", _prenom: "DEF")
 

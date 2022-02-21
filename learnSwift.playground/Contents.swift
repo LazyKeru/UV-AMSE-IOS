@@ -137,3 +137,80 @@ print("\(f15)")
 tailleIntervalle(min: 2, max: 10)
 
 // multiple parameters function
+
+func minMax(tableau: [ Int ]) -> (min: Int, max: Int )? {
+    if tableau.isEmpty { return nil }
+    var valMin = tableau[0]
+    var valMax = tableau[0]
+    for i in tableau[1..<tableau.count] {
+        if i < valMin {
+            valMin = i
+        }
+        else if i > valMax {
+            valMax = i
+        }
+    }
+    return (valMin, valMax)
+}
+
+if let bornes = minMax([8, -6, 2, 109, 3, 71]) {
+    print("Le minimum est \(bornes.min) et le maximum est \(bornes.max)")
+}
+ 
+// Name of extern parameters
+
+func concatener(chaine s1: String, avecLaChaine s2: String, etLeSeparateur sep:
+String) -> String {
+ return s1 + sep + s2
+}
+
+concatener(chaine: "Hello", avecLaChaine: "World", etLeSeparateur: ",")
+
+/** Classe **/
+
+class Eleve {
+    var nom: String
+    var prenom: String
+    var notes: [Double]
+    /** Calculated props **/
+    var moyenne: Double {
+        get {
+            var s = 0.0
+            for i in 0 ..< notes.count {
+                s += notes[i]
+            }
+            return s / Double(notes.count)
+        }
+        set(newNote) {
+            print("Vous ne pouvez pas tra quer la moyenne d'un étudiant !")
+        }
+    }
+
+    func descriptionEleve() {
+        print("Nom : \(nom), Prénom : \(prenom)")
+    }
+    class func nomClass() -> String {
+        return "Eleve"
+    }
+
+    /** Constructeur **/
+    // adding the "_" permits us to declare a new class without declaring the parameters before
+    init(_nom: String, _prenom:String) {
+        self.nom = nom
+        self.prenom = prenom
+        notes = [10]
+    }
+    convenience init() {
+        self.init("", "")
+    }
+    /** "observateur" **/
+    var notes: [Double]{
+        didSet{
+            print("La moyenne est de : \(self.moyenne)")
+        }
+    }
+    // didSet and willSet
+}
+
+var e = Eleve("ABC","DEF")
+

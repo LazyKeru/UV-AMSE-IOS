@@ -98,4 +98,42 @@ var tabTest2 = [8,7,3,4,5,9]
 tabTest1 == tabTest2 // False
 tabTest1[2...4] == tabTest2[2...4] //True
 
-/**  **/
+/** One sided ranges **/
+
+var planets = ["Mercure", "Venus", "Terre", "Mars", "Jupiter", "Saturne", "Uranus", "Neptune"]
+let outSideTheAsteroidRing = planets[4...]
+let firstFour = planets[..<4]
+// Other ...4 all inferior to 4; 2... all superior to 2
+
+/** Tuples **/
+let matAlgo: (String, Int) = ("IAP", 3) // Mat and coef
+// By default the elements name are .0 and .1 // You can name them
+let matAlgoBis: (nom:String, coef:Int) = ("IAP", 3)
+
+/** Functions int swift **/
+/**
+ Can be declared outside of a class compared to Java
+ 
+ func nameFunct(para1: type1, ..., paraN: typeN) -> typeReturn
+ 
+ **/
+
+func factoriel(n: Int) -> Int {
+    var res = 1
+    for i in 1...n{
+        res = res * i
+    }
+    return res
+}
+
+// ex of void
+func tailleIntervalle(min: Int, max: Int) {
+    print("Start : \(min), Fin: \(max), Taille: \(max - min)")
+}
+
+let f15 = factoriel(n: 15)
+print("\(f15)")
+
+tailleIntervalle(min: 2, max: 10)
+
+// multiple parameters function

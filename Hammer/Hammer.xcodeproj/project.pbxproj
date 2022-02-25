@@ -17,6 +17,10 @@
 		847A4DD927C90F3C00A4CA9F /* HammerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DD827C90F3C00A4CA9F /* HammerTests.swift */; };
 		847A4DE327C90F3C00A4CA9F /* HammerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DE227C90F3C00A4CA9F /* HammerUITests.swift */; };
 		847A4DE527C90F3C00A4CA9F /* HammerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DE427C90F3C00A4CA9F /* HammerUITestsLaunchTests.swift */; };
+		847A4DFD27C913A200A4CA9F /* Scores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DF927C913A200A4CA9F /* Scores+CoreDataClass.swift */; };
+		847A4DFE27C913A200A4CA9F /* Scores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DFA27C913A200A4CA9F /* Scores+CoreDataProperties.swift */; };
+		847A4DFF27C913A200A4CA9F /* Joueurs+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DFB27C913A200A4CA9F /* Joueurs+CoreDataClass.swift */; };
+		847A4E0027C913A200A4CA9F /* Joueurs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DFC27C913A200A4CA9F /* Joueurs+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		847A4DDE27C90F3C00A4CA9F /* HammerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HammerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A4DE227C90F3C00A4CA9F /* HammerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HammerUITests.swift; sourceTree = "<group>"; };
 		847A4DE427C90F3C00A4CA9F /* HammerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HammerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		847A4DF927C913A200A4CA9F /* Scores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataClass.swift"; sourceTree = "<group>"; };
+		847A4DFA27C913A200A4CA9F /* Scores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		847A4DFB27C913A200A4CA9F /* Joueurs+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joueurs+CoreDataClass.swift"; sourceTree = "<group>"; };
+		847A4DFC27C913A200A4CA9F /* Joueurs+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joueurs+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 		847A4DB227C90F3A00A4CA9F = {
 			isa = PBXGroup;
 			children = (
+				847A4DF927C913A200A4CA9F /* Scores+CoreDataClass.swift */,
+				847A4DFA27C913A200A4CA9F /* Scores+CoreDataProperties.swift */,
+				847A4DFB27C913A200A4CA9F /* Joueurs+CoreDataClass.swift */,
+				847A4DFC27C913A200A4CA9F /* Joueurs+CoreDataProperties.swift */,
 				847A4DBD27C90F3A00A4CA9F /* Hammer */,
 				847A4DD727C90F3C00A4CA9F /* HammerTests */,
 				847A4DE127C90F3C00A4CA9F /* HammerUITests */,
@@ -263,7 +275,11 @@
 			files = (
 				847A4DC327C90F3A00A4CA9F /* ViewController.swift in Sources */,
 				847A4DC927C90F3A00A4CA9F /* Hammer.xcdatamodeld in Sources */,
+				847A4DFE27C913A200A4CA9F /* Scores+CoreDataProperties.swift in Sources */,
+				847A4DFD27C913A200A4CA9F /* Scores+CoreDataClass.swift in Sources */,
 				847A4DBF27C90F3A00A4CA9F /* AppDelegate.swift in Sources */,
+				847A4DFF27C913A200A4CA9F /* Joueurs+CoreDataClass.swift in Sources */,
+				847A4E0027C913A200A4CA9F /* Joueurs+CoreDataProperties.swift in Sources */,
 				847A4DC127C90F3A00A4CA9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

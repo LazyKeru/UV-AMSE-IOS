@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIActionSheetDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!;
     // deisgne une methode associé à un événement graphique
     @IBAction func boutonLancer(_ sender : UIButton){
-        
+        let  action1 = UIAlertAction ( title : "Done" , style: .default)
+        let  action3 = UIAlertAction ( title : "Delete Text" , style: .destructive){
+            (action: UIAlertAction) in self.zoneSaisie.text = ""
+        }
+        if segmentedControl.selectedSegmentIndex == 0 {
+            let controler = UIAlertController (title : "Titre_du_message", message: zoneSaisie.text, preferredStyle: .alert)
+            controler.addAction(action1)
+            controler.addAction(action3)
+            self.present(controler,animated: true, completion: nil)
+        }else{
+            let controler = UIAlertController (title : "Titre_du_message", message: zoneSaisie.text, preferredStyle: .actionSheet)
+            controler.addAction(action1)
+            controler.addAction(action3)
+            self.present(controler,animated: true, completion: nil)
+        }
     }
     
     @IBAction func boutonCacher(_ sender : UIButton){
@@ -40,24 +54,5 @@ class ViewController: UIViewController {
             sender.setTitle("Cacher !", for: .normal)
         }
     }
-    let controler = UIAlertController (title : "Titre_du_message", message: "Contenu_du_message", preferredStyle: .alert)
-    let  action1 = UIAlertAction ( title : " Premier_Bouton" , style: .default){ 
-        (
-           action: UIAlertAction) in
-            // code first action
-    }
-    let  action2 = UIAlertAction ( title : "Annuler" , style: .cancel){ 
-        (
-           action: UIAlertAction) in
-            // code annuler
-    }
-    let  action3 = UIAlertAction ( title : "Bouton_type_destructif" , style: .destructive){ 
-        (
-           action: UIAlertAction) in
-            // code annuler
-    }
-        
-    
-
 }
 

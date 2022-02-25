@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846A29E427C8E5E600BF5907 /* NewClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A29E327C8E5E600BF5907 /* NewClassViewController.swift */; };
 		84F8125227C8C74100C299E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8125127C8C74100C299E8 /* AppDelegate.swift */; };
 		84F8125427C8C74100C299E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8125327C8C74100C299E8 /* SceneDelegate.swift */; };
 		84F8125627C8C74100C299E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8125527C8C74100C299E8 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		846A29E327C8E5E600BF5907 /* NewClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClassViewController.swift; sourceTree = "<group>"; };
 		84F8124E27C8C74100C299E8 /* tp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F8125127C8C74100C299E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F8125327C8C74100C299E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				84F8125327C8C74100C299E8 /* SceneDelegate.swift */,
 				84F8125527C8C74100C299E8 /* ViewController.swift */,
 				84F8125727C8C74100C299E8 /* Main.storyboard */,
+				846A29E327C8E5E600BF5907 /* NewClassViewController.swift */,
 				84F8125A27C8C74200C299E8 /* Assets.xcassets */,
 				84F8125C27C8C74200C299E8 /* LaunchScreen.storyboard */,
 				84F8125F27C8C74200C299E8 /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				84F8125627C8C74100C299E8 /* ViewController.swift in Sources */,
 				84F8125227C8C74100C299E8 /* AppDelegate.swift in Sources */,
+				846A29E427C8E5E600BF5907 /* NewClassViewController.swift in Sources */,
 				84F8125427C8C74100C299E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

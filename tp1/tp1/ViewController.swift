@@ -39,6 +39,10 @@ class ViewController: UIViewController, UIActionSheetDelegate {
         }
     }
     
+    @IBAction func clavier(_ sender: UIButton){
+        sender.resignFirstResponder()
+    }
+    
     @IBAction func boutonCacher(_ sender : UIButton){
         if sender.currentTitle == "Cacher !" {
             textTitre.isHidden = true

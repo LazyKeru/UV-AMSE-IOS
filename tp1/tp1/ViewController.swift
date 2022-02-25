@@ -18,21 +18,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var textTitre: UILabel!;
     // weak dans le type de var veux dire que la gestion mémoire de la variable est faite ailleurs
     @IBOutlet weak var zoneSaisie: UITextField!; // "!" car la var n'est pas encore créé
-
+    @IBOutlet weak var boutonLancer: UIButton!;
+    @IBOutlet weak var segmentedControl: UISegmentedControl!;
     // deisgne une methode associé à un événement graphique
     @IBAction func boutonLancer(_ sender : UIButton){
         
     }
     
     @IBAction func boutonCacher(_ sender : UIButton){
-        if sender.currentTitle == "Cacher" {
+        if sender.currentTitle == "Cacher !" {
             textTitre.isHidden = true
             zoneSaisie.isHidden = true
+            segmentedControl.isHidden = true
+            boutonLancer.isHidden = true
             sender.setTitle("Montrer", for: .normal)
         }else{
             textTitre.isHidden = false
             zoneSaisie.isHidden = false
-            sender.setTitle("Cacher", for: .normal)
+            segmentedControl.isHidden = false
+            boutonLancer.isHidden = false
+            sender.setTitle("Cacher !", for: .normal)
         }
     }
         

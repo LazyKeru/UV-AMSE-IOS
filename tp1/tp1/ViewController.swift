@@ -40,6 +40,22 @@ class ViewController: UIViewController {
             sender.setTitle("Cacher !", for: .normal)
         }
     }
+    let controler = UIAlertController (title : "Titre_du_message", message: "Contenu_du_message", preferredStyle: .alert)
+    let  action1 = UIAlertAction ( title : " Premier_Bouton" , style: .default){ 
+        (
+           action: UIAlertAction) in
+            // code first action
+    }
+    let  action2 = UIAlertAction ( title : "Annuler" , style: .cancel){ 
+        (
+           action: UIAlertAction) in
+            // code annuler
+    }
+    let  action3 = UIAlertAction ( title : "Bouton_type_destructif" , style: .destructive){ 
+        (
+           action: UIAlertAction) in
+            // code annuler
+    }
         
     
 

@@ -22,7 +22,7 @@
 		847A4DFF27C913A200A4CA9F /* Joueurs+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DFB27C913A200A4CA9F /* Joueurs+CoreDataClass.swift */; };
 		847A4E0027C913A200A4CA9F /* Joueurs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DFC27C913A200A4CA9F /* Joueurs+CoreDataProperties.swift */; };
 		847A4E0227C9199D00A4CA9F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4E0127C9199D00A4CA9F /* TableViewController.swift */; };
-		847A4E0427C91ACD00A4CA9F /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4E0327C91ACD00A4CA9F /* ScoreView.swift */; };
+		847A4E0827C9271000A4CA9F /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4E0727C9271000A4CA9F /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		847A4DFB27C913A200A4CA9F /* Joueurs+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joueurs+CoreDataClass.swift"; sourceTree = "<group>"; };
 		847A4DFC27C913A200A4CA9F /* Joueurs+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joueurs+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		847A4E0127C9199D00A4CA9F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		847A4E0327C91ACD00A4CA9F /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		847A4E0727C9271000A4CA9F /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 				847A4DC027C90F3A00A4CA9F /* SceneDelegate.swift */,
 				847A4DC227C90F3A00A4CA9F /* ViewController.swift */,
 				847A4DC427C90F3A00A4CA9F /* Main.storyboard */,
-				847A4E0327C91ACD00A4CA9F /* ScoreView.swift */,
+				847A4E0727C9271000A4CA9F /* ScoreViewController.swift */,
 				847A4E0127C9199D00A4CA9F /* TableViewController.swift */,
 				847A4DCA27C90F3B00A4CA9F /* Assets.xcassets */,
 				847A4DCC27C90F3B00A4CA9F /* LaunchScreen.storyboard */,
@@ -280,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847A4DC327C90F3A00A4CA9F /* ViewController.swift in Sources */,
+				847A4E0827C9271000A4CA9F /* ScoreViewController.swift in Sources */,
 				847A4DC927C90F3A00A4CA9F /* Hammer.xcdatamodeld in Sources */,
 				847A4DFE27C913A200A4CA9F /* Scores+CoreDataProperties.swift in Sources */,
 				847A4DFD27C913A200A4CA9F /* Scores+CoreDataClass.swift in Sources */,
@@ -288,7 +289,6 @@
 				847A4E0027C913A200A4CA9F /* Joueurs+CoreDataProperties.swift in Sources */,
 				847A4E0227C9199D00A4CA9F /* TableViewController.swift in Sources */,
 				847A4DC127C90F3A00A4CA9F /* SceneDelegate.swift in Sources */,
-				847A4E0427C91ACD00A4CA9F /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

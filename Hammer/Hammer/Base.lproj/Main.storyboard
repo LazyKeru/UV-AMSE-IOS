@@ -16,26 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Défie Moi" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WT4-yo-QpZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Défie Moi" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WT4-yo-QpZ">
                                 <rect key="frame" x="87" y="72" width="240" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Score" translatesAutoresizingMaskIntoConstraints="NO" id="Los-jn-Srh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Score" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Los-jn-Srh">
                                 <rect key="frame" x="20" y="130" width="240" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Loser !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-kU-DDD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Loser !" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-kU-DDD">
                                 <rect key="frame" x="20" y="350" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -65,6 +77,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Voir scores">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="k5F-Yi-Tsg" kind="presentation" id="gBJ-DU-RJZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,11 +88,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.536231884057973" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-20" y="84"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Kls-hk-yEZ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7Q-Ui-34A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="G1g-HR-tQN" customClass="TableViewController" customModule="Hammer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uKI-MA-Y55">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -98,25 +114,70 @@
                             <outlet property="delegate" destination="G1g-HR-tQN" id="G89-GU-XkF"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="qJP-Of-ikL"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7Q-Ui-34A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704" y="84"/>
+            <point key="canvasLocation" x="1343" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="Z9f-KY-uRV">
             <objects>
-                <viewController id="k5F-Yi-Tsg" customClass="ViewController" customModule="Hammer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3xZ-tS-Kgf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jic-6h-TMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="k5F-Yi-Tsg" customClass="ScoreViewController" customModule="Hammer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xZ-tS-Kgf" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9H-SE-Tbi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Scores" id="ZfO-UA-zGV">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="Ot1-RY-nqe">
+                                            <connections>
+                                                <action selector="retour:" destination="k5F-Yi-Tsg" id="9fU-Mc-AlQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rDO-kX-ysW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jic-6h-TMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="84"/>
+            <point key="canvasLocation" x="691" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xFN-K1-Auj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE5-oF-7e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="966-ei-kal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzX-xf-3De">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SXh-3e-672"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="17q-Gg-NUS">
+            <objects>
+                <viewController id="T9o-bI-FsA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cBm-aH-HCr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9f2-kO-UOx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDi-S6-Blz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="429"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,9 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
-    
+    @IBAction func retour(_ sender:UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var JoueurEnCours : Joueurs?
     @IBOutlet var textAAfficher : UILabel?

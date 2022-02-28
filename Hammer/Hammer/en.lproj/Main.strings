@@ -1,0 +1,36 @@
+
+/* Class = "UINavigationItem"; prompt = "+"; ObjectID = "2Qn-BJ-pwP"; */
+"2Qn-BJ-pwP.prompt" = "+";
+
+/* Class = "UINavigationItem"; title = "Score des Joueurs"; ObjectID = "2Qn-BJ-pwP"; */
+"2Qn-BJ-pwP.title" = "Score des Joueurs";
+
+/* Class = "UIButton"; configuration.title = "Voir scores"; ObjectID = "EjR-Lg-D52"; */
+"EjR-Lg-D52.configuration.title" = "Voir scores";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EjR-Lg-D52"; */
+"EjR-Lg-D52.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Go Go Go !!!!!"; ObjectID = "Ewp-jZ-nwL"; */
+"Ewp-jZ-nwL.configuration.title" = "Go Go Go !!!!!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ewp-jZ-nwL"; */
+"Ewp-jZ-nwL.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Ire-pQ-KYv"; */
+"Ire-pQ-KYv.title" = "Item";
+
+/* Class = "UITextView"; text = "Score"; ObjectID = "Los-jn-Srh"; */
+"Los-jn-Srh.text" = "Score";
+
+/* Class = "UIBarButtonItem"; title = "Retour"; ObjectID = "Ot1-RY-nqe"; */
+"Ot1-RY-nqe.title" = "Retour";
+
+/* Class = "UITextView"; text = "Loser !"; ObjectID = "P7K-kU-DDD"; */
+"P7K-kU-DDD.text" = "Loser !";
+
+/* Class = "UITextView"; text = "Défie Moi"; ObjectID = "WT4-yo-QpZ"; */
+"WT4-yo-QpZ.text" = "Défie Moi";
+
+/* Class = "UINavigationItem"; title = "Scores"; ObjectID = "ZfO-UA-zGV"; */
+"ZfO-UA-zGV.title" = "Scores";

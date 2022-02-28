@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84734EB127CCB0C0009B3B45 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84734EB027CCB0C0009B3B45 /* AddViewController.swift */; };
 		847A4DBF27C90F3A00A4CA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DBE27C90F3A00A4CA9F /* AppDelegate.swift */; };
 		847A4DC127C90F3A00A4CA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DC027C90F3A00A4CA9F /* SceneDelegate.swift */; };
 		847A4DC327C90F3A00A4CA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DC227C90F3A00A4CA9F /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84734EB027CCB0C0009B3B45 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		847A4DBB27C90F3A00A4CA9F /* Hammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A4DBE27C90F3A00A4CA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847A4DC027C90F3A00A4CA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				847A4DC227C90F3A00A4CA9F /* ViewController.swift */,
 				847A4DC427C90F3A00A4CA9F /* Main.storyboard */,
 				847A4E0727C9271000A4CA9F /* ScoreViewController.swift */,
+				84734EB027CCB0C0009B3B45 /* AddViewController.swift */,
 				847A4E0127C9199D00A4CA9F /* TableViewController.swift */,
 				847A4DCA27C90F3B00A4CA9F /* Assets.xcassets */,
 				847A4DCC27C90F3B00A4CA9F /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 				847A4DC327C90F3A00A4CA9F /* ViewController.swift in Sources */,
 				847A4E0827C9271000A4CA9F /* ScoreViewController.swift in Sources */,
 				847A4DC927C90F3A00A4CA9F /* Hammer.xcdatamodeld in Sources */,
+				84734EB127CCB0C0009B3B45 /* AddViewController.swift in Sources */,
 				847A4DFE27C913A200A4CA9F /* Scores+CoreDataProperties.swift in Sources */,
 				847A4DFD27C913A200A4CA9F /* Scores+CoreDataClass.swift in Sources */,
 				847A4DBF27C90F3A00A4CA9F /* AppDelegate.swift in Sources */,

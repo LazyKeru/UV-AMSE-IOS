@@ -32,22 +32,24 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         guard let joueurs = fetchedResultsController.fetchedObjects else { return 0 }
+        print(joueurs.count)
         return joueurs.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // #warning Incomplete implementatsion, return the number of rows
         let cell = tableView.dequeueReusableCell(withIdentifier: "celluleJeu", for: indexPath )
         let joueur = fetchedResultsController.object(at: indexPath) as Joueurs
         cell.textLabel?.text = joueur.nom
         cell.detailTextLabel?.text = joueur.prenom
+        print(joueur.nom)
+        print(joueur.prenom)
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle , forRowAt indexPath : IndexPath ) {

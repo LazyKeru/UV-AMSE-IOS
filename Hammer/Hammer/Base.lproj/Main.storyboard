@@ -126,9 +126,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="celluleJeu"/>
-                                <connections>
-                                    <segue destination="k5F-Yi-Tsg" kind="presentation" identifier="segueDetail" id="4Dg-qV-qQA"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -148,6 +145,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="k5F-Yi-Tsg" kind="presentation" identifier="segueDetail" id="D8f-rK-CgT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBl-27-2qS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +191,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvc-nw-IGD">
-                                <rect key="frame" x="163" y="434" width="42" height="21"/>
+                                <rect key="frame" x="20" y="170" width="334" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -207,12 +207,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jic-6h-TMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2200" y="462"/>
+            <point key="canvasLocation" x="2198.5507246376815" y="461.38392857142856"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="xFN-K1-Auj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WE5-oF-7e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="966-ei-kal" customClass="AddViewController" customModule="Hammer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kzX-xf-3De">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -281,6 +280,7 @@
                         <outlet property="p" destination="dGj-7F-396" id="5GO-Pd-B8g"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE5-oF-7e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2198.5507246376815" y="-231.02678571428569"/>
         </scene>

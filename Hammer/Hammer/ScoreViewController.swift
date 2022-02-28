@@ -14,13 +14,19 @@ class ScoreViewController: UIViewController {
     }
     
     var JoueurEnCours : Joueurs?
+    
     @IBOutlet var textAAfficher : UILabel?
+    
     var texte : String = ""
     
     override func viewDidLoad ( ) {
         super.viewDidLoad()
+        afficherJoueur ()
+        print("Loading ScoreViewController")
+        print("JoueurEnCours Prenom: \(String(describing: JoueurEnCours?.prenom))")
         textAAfficher?.text = texte
     }
+    
     func afficherJoueur () {
         if(JoueurEnCours == nil) {
             return
@@ -36,9 +42,13 @@ class ScoreViewController: UIViewController {
             texte = "Joueur \(j .nom!) \(j .prenom!) : "
             for index in 0 ..< ensembleScores.count-1 {
                 let s = ensembleScores.object(at: index) as! Scores
-        texte += "Le \(s.date!) −−> \(s.score) / " }
-        let s = ensembleScores.object(at: ensembleScores.count-1) as! Scores
-        texte += "Le \(s.date!) −−> \(s.score)." }
+                texte += "Le \(s.date!) −−> \(s.score) / "
+            }
+            let s = ensembleScores.object(at: ensembleScores.count-1) as! Scores
+            texte += "Le \(s.date!) −−> \(s.score)."
+            
+        }
+        print(texte)
         print ("ok") }
     
 

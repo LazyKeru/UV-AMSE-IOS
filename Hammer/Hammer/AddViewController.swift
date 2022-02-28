@@ -21,7 +21,7 @@ class AddViewController: UIViewController {
     
     @IBAction func ok(_ sender : UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managerContext = appDelegate . persistentContainer . viewContext
+        let managerContext = appDelegate.persistentContainer.viewContext
         let j: Joueurs = NSEntityDescription.insertNewObject(forEntityName: "Joueurs", into:
                                                                 managerContext ) as! Joueurs
         j.nom = n?.text

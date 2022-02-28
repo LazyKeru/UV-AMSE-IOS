@@ -106,6 +106,8 @@ class ViewController: UIViewController {
         do {
             try managerContext.save()
             print("Ajout ok")
+            print("score: \(s.score)")
+            print("player name: \(s.quelJoueur?.prenom)")
         } catch {
             let fetchError = error as NSError
             print("Impossible d’ajouter")

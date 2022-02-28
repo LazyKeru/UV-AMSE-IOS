@@ -47,8 +47,8 @@ class TableViewController: UITableViewController {
         let joueur = fetchedResultsController.object(at: indexPath) as Joueurs
         cell.textLabel?.text = joueur.nom
         cell.detailTextLabel?.text = joueur.prenom
-        print(joueur.nom)
-        print(joueur.prenom)
+        print("loading cell...")
+        //printContent("player name: \(String(describing: joueur.prenom))")
         
         return cell
     }
@@ -106,6 +106,11 @@ class TableViewController: UITableViewController {
     var estAppeleeParSelection = false
     var appelant : UIViewController?
     var JoueurEnCours : Joueurs?
+    
+    override func prepare( for segue : UIStoryboardSegue, sender : Any?) {
+        let destination = segue.destination as!  ScoreViewController
+        destination.JoueurEnCours = JoueurEnCours
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(self.estAppeleeParSelection) {

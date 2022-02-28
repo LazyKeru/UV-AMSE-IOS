@@ -56,7 +56,15 @@ class ViewController: UIViewController {
             if(motionManager == nil) {
                 return
             }
-            //donnees[nbVal] = sqrt(motionManager.accelerometerData!.acceleration.x ∗ motionManager.accelerometerData!.acceleration.x + motionManager. accelerometerData!.acceleration.y ∗ motionManager.accelerometerData!. acceleration.y + motionManager.accelerometerData!.acceleration.z ∗ motionManager . a c c e l e r o m e t e r D a t a ! . a c c e l e r a t i o n . z )
+            donnees[nbVal] = Double.random(in: 1..<10)
+            /**
+            donnees[nbVal] = sqrt(motionManager.accelerometerData!.acceleration.x *
+                                  motionManager.accelerometerData!.acceleration.x +
+                                  motionManager.accelerometerData!.acceleration.y *
+                                  motionManager.accelerometerData!.acceleration.y +
+                                  motionManager.accelerometerData!.acceleration.z *
+                                  motionManager.accelerometerData!.acceleration.z )
+             **/
             //attention sur simulateur , accelerometerData est nil ...
             print("Acquisition : \(nbVal)")
             nbVal += 1
@@ -66,7 +74,11 @@ class ViewController: UIViewController {
     func calculScore(){
         // Calcul de votre score en fonction du max ou de la moyenne de votre tableau " donnees"
         // Affectation dans la variable score ...
-        score = 10
+        var score: Double = 0
+        for donnee in donnees {
+            score += donnee
+        }
+        score = score / Double(donnees.count)
     }
     
     override func prepare ( for segue : UIStoryboardSegue , sender : Any?) {
@@ -79,13 +91,13 @@ class ViewController: UIViewController {
     func saveScore () {
         let max1: Double = sqrt(192) // Si 8g max par axe...
         if(score > 10) {
-            message?.text = "BIEN"
+            message?.text = "ROI DES PUCEAUX"
         }
         else if(score > 5) {
-            message?.text = "Pas Mal"
+            message?.text = "PUCEAUX LAMBDA"
         }
         else {
-            message?.text = "Loser !"
+            message?.text = "CHAD"
         }
         slider1?.value = Float(score / max1)
         slider2?.value = Float(score / max1)

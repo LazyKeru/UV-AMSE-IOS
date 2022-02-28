@@ -108,16 +108,20 @@ class TableViewController: UITableViewController {
     var JoueurEnCours : Joueurs?
     
     override func prepare( for segue : UIStoryboardSegue, sender : Any?) {
-        let destination = segue.destination as!  ScoreViewController
-        destination.JoueurEnCours = JoueurEnCours
+        if (segue.identifier == "segueDetail") {
+            let destination = segue.destination as! ScoreViewController
+            destination.JoueurEnCours = JoueurEnCours
+        }
+        else {
+            (segue.destination as! AddViewController).appelant = self
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(self.estAppeleeParSelection) {
-            ( self.appelant as! ViewController ).joueurAAssigner =
-            fetchedResultsController.object(at: indexPath) as Joueurs
-                self.dismiss(animated: true, completion: nil)
-            (self.appelant as! ViewController).saveScore ()
+            ( self.appelant as! ViewController ).joueurAAssigner = fetchedResultsController.object(at: indexPath) as Joueurs
+            self.dismiss(animated: true, completion: nil)
+            (self.appelant as! ViewController).saveScore()
         }
         else {
             JoueurEnCours = fetchedResultsController.object(at: indexPath) as Joueurs

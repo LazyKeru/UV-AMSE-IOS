@@ -40,18 +40,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Loser !" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-kU-DDD">
-                                <rect key="frame" x="20" y="350" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-KG-LPx">
                                 <rect key="frame" x="18" y="188" width="378" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,6 +72,13 @@
                                     <segue destination="Fnj-Qy-4Io" kind="presentation" id="9AX-3F-6rJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOSER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-ye-bWc">
+                                <rect key="frame" x="137" y="379" width="140" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,6 +86,7 @@
                     <connections>
                         <outlet property="boutonGo" destination="Ewp-jZ-nwL" id="iok-gi-HTe"/>
                         <outlet property="boutonScores" destination="EjR-Lg-D52" id="ISu-JC-4Gx"/>
+                        <outlet property="message" destination="YQZ-ye-bWc" id="4qd-T0-iXl"/>
                         <outlet property="slider1" destination="Kaa-KG-LPx" id="Ws0-NR-24f"/>
                         <outlet property="slider2" destination="pie-gk-RdD" id="rxw-N0-Hm5"/>
                         <segue destination="Fnj-Qy-4Io" kind="presentation" identifier="segueSelectionJoueur" id="u77-tU-Ce7"/>
@@ -98,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="11"/>
+            <point key="canvasLocation" x="11.594202898550726" y="10.714285714285714"/>
         </scene>
         <!--Score des Joueurs-->
         <scene sceneID="Dkw-6Q-bOp">

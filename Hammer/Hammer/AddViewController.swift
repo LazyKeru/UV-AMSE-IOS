@@ -10,6 +10,8 @@ import CoreData
 
 class AddViewController: UIViewController {
 
+    var appelant: TableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +38,8 @@ class AddViewController: UIViewController {
             print ("\(fetchError) , \(fetchError.localizedDescription)")
     }
         self.dismiss(animated: true, completion: nil)
+        appelant?.chargerDonnees()
+        appelant?.tableView.reloadData()
     }
     @IBAction func cancel(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

@@ -24,6 +24,8 @@ class ScoreViewController: UIViewController {
         afficherJoueur ()
         print("Loading ScoreViewController")
         print("JoueurEnCours Prenom: \(String(describing: JoueurEnCours?.prenom))")
+        JoueurEnCours?.ensembleDesScores?.count
+        print("JoueurEnCours nombre de score: \(JoueurEnCours?.ensembleDesScores?.count)")
         textAAfficher?.text = texte
     }
     

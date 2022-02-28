@@ -14,11 +14,17 @@ class TableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func refresh(sender: AnyObject){
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         chargerDonnees()
         self.tableView.reloadData()
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,7 +32,9 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         self.tableView.reloadData()
     }
     // MARK: - Table view data source

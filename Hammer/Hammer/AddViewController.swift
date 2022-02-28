@@ -37,10 +37,10 @@ class AddViewController: UIViewController {
             print ("Impossible d’ajouter")
             print ("\(fetchError) , \(fetchError.localizedDescription)")
     }
+        appelant?.viewDidLoad()
         self.dismiss(animated: true, completion: nil)
-        appelant?.chargerDonnees()
-        appelant?.tableView.reloadData()
     }
+    
     @IBAction func cancel(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

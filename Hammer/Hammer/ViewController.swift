@@ -177,9 +177,7 @@ class ViewController: UIViewController {
             let _joueur : Joueurs = fetchedResultsController.object(at: IndexPath(row: _j, section: 0)) as Joueurs
             let _ensembleScores:NSArray = _joueur.ensembleDesScores!.allObjects as NSArray
             print("Player: \(String(describing: _joueur.nom))")
-            if(_joueur.ensembleDesScores == nil || _joueur.ensembleDesScores?.count == 0 ) {
-                print("No score")
-            }else{
+            if(_joueur.ensembleDesScores != nil && _joueur.ensembleDesScores?.count != 0 ) {
                 for _i in 0..<_ensembleScores.count-1 {
                     let _score = _ensembleScores.object(at: _i) as! Scores
                     print("score \(_i): \(String(describing: _score.score))")

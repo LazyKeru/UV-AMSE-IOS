@@ -36,6 +36,9 @@ class ViewController: UIViewController {
         motionManager = CMMotionManager()
         motionManager.accelerometerUpdateInterval = 0.01
         motionManager.startAccelerometerUpdates ()
+        while(motionManager.accelerometerData == nil){
+            print("MotionManager has not started. Please be better apple")
+        }
         donnees = [Double](repeating: 0, count: 500)
     // ici : décoration pour faire une jolie animation avec des chiffres
     // possiblement parler : classe AVSpeechVoiceSynthesis : https :// developer . apple .com/documentation/avfaudio/avspeechsynthesisvoice
@@ -58,7 +61,6 @@ class ViewController: UIViewController {
             if(motionManager == nil) {
                 return
             }
-            donnees[nbVal] = Double.random(in: 1..<10)
             
             donnees[nbVal] = sqrt(motionManager.accelerometerData!.acceleration.x *
                                   motionManager.accelerometerData!.acceleration.x +

@@ -76,6 +76,7 @@ class TableViewController: UITableViewController {
 
     
     let persistentContainer = NSPersistentContainer.init(name: "Hammer") // ici à remplacer par le nom de votre modèle
+    
     lazy var fetchedResultsController: NSFetchedResultsController<Joueurs> = {
         let fetchRequest : NSFetchRequest<Joueurs> = Joueurs . fetchRequest ()
         
@@ -88,6 +89,7 @@ class TableViewController: UITableViewController {
         return fetchedResultsController
         
     }()
+    
     func chargerDonnees(){
         persistentContainer.loadPersistentStores {
             (persistentStoreDescription , error) in

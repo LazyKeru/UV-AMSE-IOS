@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        chargerDonnees()
+        maxScore ()
         // Do any additional setup after loading the view.
     }
     
@@ -74,11 +76,11 @@ class ViewController: UIViewController {
     func calculScore(){
         // Calcul de votre score en fonction du max ou de la moyenne de votre tableau " donnees"
         // Affectation dans la variable score ...
-        var score: Double = 0
-        for donnee in donnees {
+        score = 5
+        /**for donnee in donnees {
             score += donnee
         }
-        score = score / Double(donnees.count)
+        score = score / Double(donnees.count)**/
     }
     
     override func prepare ( for segue : UIStoryboardSegue , sender : Any?) {
@@ -100,7 +102,8 @@ class ViewController: UIViewController {
             message?.text = "CHAD"
         }
         slider1?.value = Float(score / max1)
-        slider2?.value = Float(score / max1)
+        //slider2?.value = Float(score / max1)
+        maxScore() // Max score called again to update. In case we beat the high score
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managerContext = appDelegate.persistentContainer.viewContext
         let s: Scores = NSEntityDescription.insertNewObject(forEntityName: "Scores",
@@ -119,12 +122,76 @@ class ViewController: UIViewController {
             try managerContext.save()
             print("Ajout ok")
             print("score: \(s.score)")
-            print("player name: \(s.quelJoueur?.prenom)")
+            print("player name: \(String(describing: s.quelJoueur?.prenom))")
         } catch {
             let fetchError = error as NSError
             print("Impossible d’ajouter")
             print ("\( fetchError ),\(fetchError.localizedDescription)")
         }
     }
+    
+    let persistentContainer = NSPersistentContainer.init(name: "Hammer") // ici à remplacer par le nom de votre modèle
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<Joueurs> = {
+        let fetchRequest : NSFetchRequest<Joueurs> = Joueurs . fetchRequest ()
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "nom", ascending: false)]
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managerContext = appDelegate.persistentContainer.viewContext
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest : fetchRequest , managedObjectContext : managerContext , sectionNameKeyPath : nil , cacheName : nil )
+        fetchedResultsController.delegate = self
+        return fetchedResultsController
+        
+    }()
+    
+    func chargerDonnees(){
+        persistentContainer.loadPersistentStores {
+            (persistentStoreDescription , error) in
+            if let error = error {
+                print ("Unable_to_Load_Persistent_Store")
+                print ("\( error ) ,_\( error . localizedDescription )")
+            }
+            else{
+                do{
+                    try self.fetchedResultsController.performFetch ()
+                    
+                }
+                catch {
+                    let fetchError = error as NSError
+                    print ("Unable_to_Perform_Fetch_Request")
+                    print ("\( fetchError ) ,_\( fetchError.localizedDescription )")
+                }
+            }
+        }
+    }
+    
+    func maxScore () {
+        print("MaxScore Called")
+        let _max1: Double = sqrt(192) // Si 8g max par axe...
+        var _maxScore : Double = 0
+        // Get the joueurs
+        guard let _joueurs = fetchedResultsController.fetchedObjects else { return }
+        print("Amount of player: \(_joueurs.count)")
+        for _j in 0..<(_joueurs.count-1) {
+            let _joueur : Joueurs = fetchedResultsController.object(at: IndexPath(row: _j, section: 0)) as Joueurs
+            let _ensembleScores:NSArray = _joueur.ensembleDesScores!.allObjects as NSArray
+            print("Player: \(String(describing: _joueur.nom))")
+            if(_joueur.ensembleDesScores == nil || _joueur.ensembleDesScores?.count == 0 ) {
+                print("No score")
+            }else{
+                for _i in 0..<_ensembleScores.count-1 {
+                    let _score = _ensembleScores.object(at: _i) as! Scores
+                    print("score \(_i): \(String(describing: _score.score))")
+                    if _score.score > _maxScore { _maxScore = _score.score}
+                }
+            }
+        }
+        slider2?.value = Float(_maxScore / _max1);
+    }
+    
 }
 
+extension ViewController: NSFetchedResultsControllerDelegate {
+    
+} 

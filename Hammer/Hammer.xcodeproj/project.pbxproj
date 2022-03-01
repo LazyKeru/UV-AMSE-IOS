@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8439BCB427CE7BF10041F7F4 /* RulesLeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439BCB327CE7BF10041F7F4 /* RulesLeaderViewController.swift */; };
 		84734EB127CCB0C0009B3B45 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84734EB027CCB0C0009B3B45 /* AddViewController.swift */; };
 		847A4DBF27C90F3A00A4CA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DBE27C90F3A00A4CA9F /* AppDelegate.swift */; };
 		847A4DC127C90F3A00A4CA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A4DC027C90F3A00A4CA9F /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8439BCB327CE7BF10041F7F4 /* RulesLeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesLeaderViewController.swift; sourceTree = "<group>"; };
 		84734EB027CCB0C0009B3B45 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		847A4DBB27C90F3A00A4CA9F /* Hammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A4DBE27C90F3A00A4CA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				847A4DC027C90F3A00A4CA9F /* SceneDelegate.swift */,
 				847A4DC227C90F3A00A4CA9F /* ViewController.swift */,
 				847A4DC427C90F3A00A4CA9F /* Main.storyboard */,
+				8439BCB327CE7BF10041F7F4 /* RulesLeaderViewController.swift */,
 				847A4E0727C9271000A4CA9F /* ScoreViewController.swift */,
 				84734EB027CCB0C0009B3B45 /* AddViewController.swift */,
 				847A4E0127C9199D00A4CA9F /* TableViewController.swift */,
@@ -291,6 +294,7 @@
 				847A4DBF27C90F3A00A4CA9F /* AppDelegate.swift in Sources */,
 				847A4DFF27C913A200A4CA9F /* Joueurs+CoreDataClass.swift in Sources */,
 				847A4E0027C913A200A4CA9F /* Joueurs+CoreDataProperties.swift in Sources */,
+				8439BCB427CE7BF10041F7F4 /* RulesLeaderViewController.swift in Sources */,
 				847A4E0227C9199D00A4CA9F /* TableViewController.swift in Sources */,
 				847A4DC127C90F3A00A4CA9F /* SceneDelegate.swift in Sources */,
 			);

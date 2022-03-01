@@ -93,13 +93,13 @@ class ViewController: UIViewController {
     func saveScore () {
         let max1: Double = sqrt(192) // Si 8g max par axe...
         if(score > 10) {
-            message?.text = "ROI DES PUCEAUX"
+            message?.text = "ROI DES BIG BOSS"
         }
         else if(score > 5) {
-            message?.text = "PUCEAUX LAMBDA"
+            message?.text = "BIG BOSS"
         }
         else {
-            message?.text = "CHAD"
+            message?.text = "SMALL BOSS"
         }
         slider1?.value = Float(score / max1)
         //slider2?.value = Float(score / max1)

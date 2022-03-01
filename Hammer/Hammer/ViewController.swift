@@ -59,14 +59,13 @@ class ViewController: UIViewController {
                 return
             }
             donnees[nbVal] = Double.random(in: 1..<10)
-            /**
+            
             donnees[nbVal] = sqrt(motionManager.accelerometerData!.acceleration.x *
                                   motionManager.accelerometerData!.acceleration.x +
                                   motionManager.accelerometerData!.acceleration.y *
                                   motionManager.accelerometerData!.acceleration.y +
                                   motionManager.accelerometerData!.acceleration.z *
                                   motionManager.accelerometerData!.acceleration.z )
-             **/
             //attention sur simulateur , accelerometerData est nil ...
             print("Acquisition : \(nbVal)")
             nbVal += 1
@@ -76,11 +75,11 @@ class ViewController: UIViewController {
     func calculScore(){
         // Calcul de votre score en fonction du max ou de la moyenne de votre tableau " donnees"
         // Affectation dans la variable score ...
-        score = 5
-        /**for donnee in donnees {
+        score = 0
+        for donnee in donnees {
             score += donnee
         }
-        score = score / Double(donnees.count)**/
+        score = score / Double(donnees.count)
     }
     
     override func prepare ( for segue : UIStoryboardSegue , sender : Any?) {
